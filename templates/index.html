@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="col-sm-12">
+    <div class="home-tab">
+
+      <div class="tab-content tab-content-basic">
+        <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+          <div class="row">
+            <div class="col-lg-5 d-flex flex-column">
+              <div class="row flex-grow">
+                <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
+                  <div class="card card-rounded">
+                    <div class="card-body">
+                      <div class="d-sm-flex justify-content-between align-items-start">
+                        <div class="d-sm-flex justify-content-between align-items-start">
+                          <div>
+                            <h3 class="card-title card-title-dash">Please select a Character</h3>
+                            <select id="select_pokemain" class="card-subtitle card-subtitle-dash form-select" onchange="changePOKESTATS(this.value)"></select>
+
+                            <!-- <h3 class="card-subtitle card-subtitle-dash"></h3> -->
+                            
+                            <table class="tiny_table_style">
+                              <tr>
+                                <th id="pokeNAMEMAIN"></th>
+                                <td><img id="pokeIMGMAIN" alt="pokemon pic", width="100"></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>                        
+                      </div>
+                      <div class="mt-1">
+                        <table class="table select-table big_table_style">
+                            <tr id="characterWeight">
+                              <th>Weight</th>
+                              <td></td>
+                            </tr>
+                            <tr id="characterHeight">
+                              <th>Height</th>
+                              <td></td>
+                            </tr>
+                            <tr id="characterHabitat">
+                              <th>Habitat</th>
+                              <td></td>
+                            </tr>
+                            <tr id="characterType1_2">
+                              <th>Type(1/2)</th>
+                              <td></td>
+                            </tr>
+                            <tr id="characterEvolve">
+                              <th>Evolves From</th>
+                              <td></td>
+                            </tr>
+                            <tr id="growthRate">
+                              <th>Growth Rate</th>
+                              <td></td>
+                            </tr>
+                        </table>
+                      </div>
+                      <hr>
+                      <div id="performance-line-legend">
+                        <div class="chartjs-legend">
+                          <table>
+                            <tr>
+                              <td>Color: </td>
+                              <td id="characterColor"></td>
+                              <td> <div style="padding-left: 20px;" >Shape:</div>  </td>
+                              <td id="characterShape"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 d-flex flex-column">
+              <div class="row flex-grow">
+                <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                  <div class="card  card-rounded">
+                    <div class="card-body pb-0">
+                    
+                      <div class="home-tab">
+                        <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active ps-0" id="first-tab" data-bs-toggle="tab" href="#wt_ht" role="tab" aria-controls="overview" aria-selected="true">Character Weight & Height vs The Average</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="second-tab" data-bs-toggle="tab" href="#gr" role="tab" aria-selected="false">Character Gender Rate vs The Average</a>
+                            </li>
+                          </ul>
+                        </div>
+                  
+                        <!-- start of all tabs container -->
+                        <div class="tab-content tab-content-basic">
+                  
+                          <!-- start of 1st tab -->
+                          <div class="tab-pane fade show active" id="wt_ht" role="tabpanel" aria-labelledby="overview">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="status-summary-chart-wrapper pb-4">
+                                  <canvas id="compare_with_avg_wt_ht_plot"></canvas>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- end of 1st tab -->
+                  
+                  
+                          <!-- start of  2nd tab -->
+                          <div class="tab-pane fade show" id="gr" role="tabpanel" aria-labelledby="overview">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="status-summary-chart-wrapper pb-4">
+                                  <canvas id="compare_with_avg_gender_rate_plot"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of 2nd tab -->      
+                  
+                        </div>
+                  
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
