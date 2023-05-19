@@ -4,21 +4,16 @@ from sqlalchemy import create_engine, func
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 
-import pandas as pd
-import numpy as np
-
 import re
 
-
-# Saved password in config file which will be gitignored
-from config import pw
+# importing config variables containing sensitive db data
+from dev_db_config import username, password, database_name
+# from production_db_config import username, password, database_name
 
 protocol = 'mysql+pymysql'
-username = 'root'
-password = pw
 host = 'localhost'
 port = 3306
-database_name = 'pandachams_db'
+
 rds_connection_string = f'{protocol}://{username}:{password}@{host}:{port}/{database_name}'
 engine = create_engine(rds_connection_string)
 

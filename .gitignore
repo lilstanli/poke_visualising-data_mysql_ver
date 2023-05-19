@@ -1,5 +1,7 @@
 # Config.py file which houses sqlalchemy and Postgres elements
-config.py
+production_db_config.py
+dev_db_config.py
+
 ipynb/config.py
 
 # Byte-compiled / optimized / DLL files
