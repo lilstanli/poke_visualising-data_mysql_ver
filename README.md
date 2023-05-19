@@ -1,7 +1,8 @@
 # Project 3 - The PandaChams Pokemon Tracker
 
 <p align="center">
-[https://poke.stannyarko.codes]<img src ="https://github.com/MohammedRizwan-1/Project-3-Visualising-Data/blob/main/Screenshots/pancham.jpg" width=10% height=20%>
+[<img alt="pancham img" width="40px" src="https://github.com/MohammedRizwan-1/Project-3-Visualising-Data/blob/main/Screenshots/pancham.jpg" width=10% height=20%/>](https://poke.stannyarko.codes)
+
 </p>
 
 ## Contents
