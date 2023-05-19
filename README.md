@@ -4,7 +4,7 @@
 <img src ="https://github.com/MohammedRizwan-1/Project-3-Visualising-Data/blob/main/Screenshots/pancham.jpg" width=10% height=20%>
 </p>
 
-[**Live demo link**](poke.stannyarko.codes "Live demo link")
+[**Live demo link**](poke.stannyarko.codes "Live demo link"){target="_blank"}
 
 ## Contents
 * [Project Summary](#proposal-header)
